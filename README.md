@@ -44,6 +44,20 @@ Der Admin, der sich zwar kaum mit HTML auskennt, versucht nun eine Seite zu erst
 
 ![deleted](https://user-images.githubusercontent.com/26624740/205597203-6cd30e88-76e2-4ec5-8256-118c49fa4375.PNG)
 
+Diese Sicherheitslücke ist darum da, weil es sich um einen "GET-Request" handelt. Das muss jetzt im JSF behoben werden.
+
+### Lösung:
+
+✔Hier müssen folgende Schritte gemacht werden: Die Frontendseite "delete.xhtml" entfernen, das HTML-Element des Deleteknopfs zu einem XHTML-Commandbutton umstellen und die Löschmethode mit einer Backendfunktion verknüpfen. Der XHTML-Tag sollte nun so aussehen:
+
+```html
+   <h:commandButton value="delete" action="#{newsController.delete(newsitem)}" class="btn btn-danger btn-xs"></h:commandButton>
+```
+
+Wenn jetzt auf dem Portal ein News-Beitrag gelöscht wird, kann man unter den Devtools beobachten, dass es sich nun um ein "POST-Request" handelt. Externe Quellen können diese Aktion nicht mehr durchführen aufgrund CORS-Policy:
+
+![POST](https://user-images.githubusercontent.com/26624740/205603205-eba4c8a2-ba63-4454-bd65-ee9436ef0b62.PNG)
+
 
 ✍️ Verwenden Sie drei verschiedene Medien, um zu zeigen, was Sie gelernt haben. Zum Beispiel:
 
