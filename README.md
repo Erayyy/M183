@@ -7,7 +7,7 @@
 
 ## Was habe ich gelernt?
 
-✍️ Beschreiben Sie in einem Satz **eine** Sache, die Sie bei diesem Projekt gelernt haben und die Sie in diesem Lern-Bericht dokumentieren.
+📕 Ich habe gelernt, wie man CRSF Attacken vermeiden kann.
 
 ## Beschreibung
 
@@ -51,29 +51,23 @@ Diese Sicherheitslücke ist darum da, weil es sich um einen "GET-Request" handel
 ✔Hier müssen folgende Schritte gemacht werden: Die Frontendseite "delete.xhtml" entfernen, das HTML-Element des Deleteknopfs zu einem XHTML-Commandbutton umstellen und die Löschmethode mit einer Backendfunktion verknüpfen. Der XHTML-Tag sollte nun so aussehen:
 
 ```html
-   <h:commandButton value="delete" action="#{newsController.delete(newsitem)}" class="btn btn-danger btn-xs"></h:commandButton>
+<h:commandButton value="delete" action="#{newsController.delete(newsitem)}" class="btn btn-danger btn-xs"></h:commandButton>
 ```
 
-Wenn jetzt auf dem Portal ein News-Beitrag gelöscht wird, kann man unter den Devtools beobachten, dass es sich nun um ein "POST-Request" handelt. Externe Quellen können diese Aktion nicht mehr durchführen aufgrund CORS-Policy:
+Wenn jetzt auf dem Portal ein News-Beitrag gelöscht wird, kann man unter den Devtools beobachten, dass es sich nun um ein "POST-Request" handelt. Externe Quellen können diese Aktion nicht mehr durchführen aufgrund der CORS-Policy:
 
 ![POST](https://user-images.githubusercontent.com/26624740/205603205-eba4c8a2-ba63-4454-bd65-ee9436ef0b62.PNG)
 
-
-✍️ Verwenden Sie drei verschiedene Medien, um zu zeigen, was Sie gelernt haben. Zum Beispiel:
-
-* Eine textliche Beschreibung
-* Ein deutliches, aussagekräftiges Bild oder eine kommentierte Bildschirm-Aufnahme
-* Ein gut dokumentierter Code-Fetzen
-* Ein Link zu einem *selbst aufgenommenen* youtube-Video oder `.gif`.
+Der Admin versucht die Attacke nochmals durchzuführen und kann bestätigen, dass das Problem beseitigt wurde.
 
 ## Verifikation
 
-✍️ Erklären Sie kurz und bündig, inwiefern die von Ihnen verwendeten Medien zeigen, was Sie gelernt haben.
+📊 Der Screenshot, worin die HTTP-Requests aufgezeichnet werden, verifiziert, dass die Löschmethode nun unter einem "POST-Request" läuft und durch das "strict-origin-when-cross-origin" von externen Angreifern geschützt wird.
 
 # Reflektion zum Arbeitsprozess
 
-👍 Überlegen Sie sich jeweils etwas, was gut an Ihrer Arbeit lief; 
+👍 Das formale Arbeiten am Lern-Bericht lief gut ab: Es wurden verschiedene Medien benutzt, eine klare Dokumentation des Projekts wurde geliefert und ein sinnvolles Fazit konnte eingeleitet werden.
 
-👎 und etwas, was nicht gut lief.
+👎 Während des Moduls habe ich es versäumt, den Ablauf der Lernaufträge gut zu dokumentieren. Dadurch musste ich mich in das Thema wie von vorne einarbeiten, da mir die Lösungen dazu fehlten.
 
-**VBV**: ✍️ Formulieren Sie davon ausgehend einen *handelbaren* Verbesserungsvorschlag.
+**VBV**: ✍️ Im nächsten Modul werde ich Lernaufträge und Projekte so führen, dass mir die Arbeitsschritte beim Einlesen sofort klar werden.
