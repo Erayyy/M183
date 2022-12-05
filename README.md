@@ -40,7 +40,7 @@ Der Admin, der sich zwar kaum mit HTML auskennt, versucht nun eine Seite zu erst
 </html>
 ```
 
-❗ Der Admin startet die obrige HTML-Seite auf seinem Computer. Geht er nun wieder auf das News-Portal und ihm fällt auf, dass der News-Eintrag auf einmal fehlt:
+❗ Der Admin startet die obige HTML-Seite auf seinem Computer. Geht er nun wieder auf das News-Portal und ihm fällt auf, dass der News-Eintrag auf einmal fehlt:
 
 ![deleted](https://user-images.githubusercontent.com/26624740/205597203-6cd30e88-76e2-4ec5-8256-118c49fa4375.PNG)
 
@@ -54,7 +54,7 @@ Diese Sicherheitslücke ist darum da, weil es sich um einen "GET-Request" handel
 <h:commandButton value="delete" action="#{newsController.delete(newsitem)}" class="btn btn-danger btn-xs"></h:commandButton>
 ```
 
-Wenn jetzt auf dem Portal ein News-Beitrag gelöscht wird, kann man unter den Devtools beobachten, dass es sich nun um ein "POST-Request" handelt. Externe Quellen können diese Aktion nicht mehr durchführen aufgrund der CORS-Policy:
+Wenn jetzt auf dem Portal ein News-Beitrag gelöscht wird, kann man unter den Devtools beobachten, dass es sich inzwischen um ein "POST-Request" handelt. Externe Quellen können diese Aktion nicht mehr durchführen aufgrund der CORS-Policy:
 
 ![POST](https://user-images.githubusercontent.com/26624740/205603205-eba4c8a2-ba63-4454-bd65-ee9436ef0b62.PNG)
 
@@ -62,7 +62,7 @@ Der Admin versucht die Attacke nochmals durchzuführen und kann bestätigen, das
 
 ## Verifikation
 
-📊 Der Screenshot, worin die HTTP-Requests aufgezeichnet werden, verifiziert, dass die Löschmethode nun unter einem "POST-Request" läuft und durch das "strict-origin-when-cross-origin" von externen Angreifern geschützt wird.
+📊 Der Screenshot, worin die HTTP-Requests aufgezeichnet werden, verifiziert zusammen mit den Codeausschnitten und dem dazugehörigen Text, dass die Löschmethode nun unter einem "POST-Request" läuft und durch das "strict-origin-when-cross-origin" von externen Angreifern geschützt wird.
 
 # Reflektion zum Arbeitsprozess
 
